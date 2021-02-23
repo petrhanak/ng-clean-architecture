@@ -32,34 +32,31 @@
     }
   },
   "projects": {
-    "idk-test": {
+    "admin": {
       "projectType": "application",
-      "root": "apps/idk-test",
-      "sourceRoot": "apps/idk-test/src",
+      "root": "apps/admin",
+      "sourceRoot": "apps/admin/src",
       "prefix": "ng-clean-architecture",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/idk-test",
-            "index": "apps/idk-test/src/index.html",
-            "main": "apps/idk-test/src/main.ts",
-            "polyfills": "apps/idk-test/src/polyfills.ts",
-            "tsConfig": "apps/idk-test/tsconfig.app.json",
+            "outputPath": "dist/apps/admin",
+            "index": "apps/admin/src/index.html",
+            "main": "apps/admin/src/main.ts",
+            "polyfills": "apps/admin/src/polyfills.ts",
+            "tsConfig": "apps/admin/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/idk-test/src/favicon.ico",
-              "apps/idk-test/src/assets"
-            ],
-            "styles": ["apps/idk-test/src/styles.scss"],
+            "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
+            "styles": ["apps/admin/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/idk-test/src/environments/environment.ts",
-                  "with": "apps/idk-test/src/environments/environment.prod.ts"
+                  "replace": "apps/admin/src/environments/environment.ts",
+                  "with": "apps/admin/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -87,61 +84,136 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "idk-test:build"
+            "browserTarget": "admin:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "idk-test:build:production"
+              "browserTarget": "admin:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "idk-test:build"
+            "browserTarget": "admin:build"
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "apps/idk-test/src/**/*.ts",
-              "apps/idk-test/src/**/*.html"
+              "apps/admin/src/**/*.ts",
+              "apps/admin/src/**/*.html"
             ]
           }
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/idk-test"],
+          "outputs": ["coverage/apps/admin"],
           "options": {
-            "jestConfig": "apps/idk-test/jest.config.js",
+            "jestConfig": "apps/admin/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "idk-test-e2e": {
-      "root": "apps/idk-test-e2e",
-      "sourceRoot": "apps/idk-test-e2e/src",
+    "admin-e2e": {
+      "root": "apps/admin-e2e",
+      "sourceRoot": "apps/admin-e2e/src",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/idk-test-e2e/cypress.json",
-            "tsConfig": "apps/idk-test-e2e/tsconfig.e2e.json",
-            "devServerTarget": "idk-test:serve"
+            "cypressConfig": "apps/admin-e2e/cypress.json",
+            "tsConfig": "apps/admin-e2e/tsconfig.e2e.json",
+            "devServerTarget": "admin:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "idk-test:serve:production"
+              "devServerTarget": "admin:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/idk-test-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/admin-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "admin-application": {
+      "projectType": "library",
+      "root": "libs/admin/application",
+      "sourceRoot": "libs/admin/application/src",
+      "prefix": "ng-clean-architecture",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/application/src/**/*.ts",
+              "libs/admin/application/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/application"],
+          "options": {
+            "jestConfig": "libs/admin/application/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "admin-domain": {
+      "projectType": "library",
+      "root": "libs/admin/domain",
+      "sourceRoot": "libs/admin/domain/src",
+      "prefix": "ng-clean-architecture",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/domain/src/**/*.ts",
+              "libs/admin/domain/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/domain"],
+          "options": {
+            "jestConfig": "libs/admin/domain/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "admin-infrastructure": {
+      "projectType": "library",
+      "root": "libs/admin/infrastructure",
+      "sourceRoot": "libs/admin/infrastructure/src",
+      "prefix": "ng-clean-architecture",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/admin/infrastructure/src/**/*.ts",
+              "libs/admin/infrastructure/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/admin/infrastructure"],
+          "options": {
+            "jestConfig": "libs/admin/infrastructure/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

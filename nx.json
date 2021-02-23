@@ -1,34 +1,25 @@
 {
   "implicitDependencies": {
     "angular.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "npmScope": "ng-clean-architecture",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
-      }
+      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
     }
   },
   "projects": {
-    "idk-test": {
-      "tags": []
-    },
-    "idk-test-e2e": {
-      "tags": [],
-      "implicitDependencies": ["idk-test"]
-    }
+    "admin": { "tags": [] },
+    "admin-e2e": { "tags": [], "implicitDependencies": ["admin"] },
+    "admin-application": { "tags": [] },
+    "admin-domain": { "tags": [] },
+    "admin-infrastructure": { "tags": [] }
   }
 }

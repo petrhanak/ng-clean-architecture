@@ -14,7 +14,15 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ng-clean-architecture/admin/application": [
+        "./libs/admin/application/src/index.ts"
+      ],
+      "@ng-clean-architecture/admin/domain": ["libs/admin/domain/src/index.ts"],
+      "@ng-clean-architecture/admin/infrastructure": [
+        "libs/admin/infrastructure/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

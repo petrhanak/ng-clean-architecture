@@ -1,0 +1,19 @@
+<h2>Blog posts</h2>
+<div *ngIf="isLoading">
+  loading...
+</div>
+
+<div *ngIf="!isLoading">
+  <div *ngFor="let post of posts" class="box" >
+    {{post.content}}
+    <div class="user">
+      Author: {{post.user.lastName}}, {{post.user.firstName}}
+    </div>
+    <button (click)="openComments(post.id)" class="commentButton">comments</button>
+    <div *ngIf="post.id == activePostId">
+      <div *ngFor="let comment of comments" class="comment">
+        {{comment.text}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,7 @@
 module.exports = {
-  projects: ['<rootDir>/apps/idk-test'],
+  projects: [
+    '<rootDir>/apps/admin',
+    '<rootDir>/libs/admin/application',
+    '<rootDir>/libs/admin/infrastructure',
+  ],
 };
