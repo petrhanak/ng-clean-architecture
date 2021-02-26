@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -21,8 +20,13 @@
       "dom"
     ],
     "paths": {
-      "@ngca/feature": [
-        "../../lib/feature/src/index.ts",
+      "feature": [
+        "dist/feature/feature",
+        "dist/feature"
+      ],
+      "xyz": [
+        "dist/xyz/xyz",
+        "dist/xyz"
       ]
     }
   },
