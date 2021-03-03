@@ -20,7 +20,7 @@
         "./node_modules/@angular/*"
       ],
       "@ngca/feature": [
-        "../../lib/feature/src/index.ts"
+        "../../modules/main/feature/src/index.ts"
       ]
     }
   },

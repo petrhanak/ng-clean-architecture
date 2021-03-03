@@ -21,7 +21,7 @@ Thumbs.db
 node_modules/
 
 # compiled output
-app/**/dist
+apps/**/dist
 /tmp
 /out-tsc
 
