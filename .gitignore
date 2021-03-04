@@ -19,6 +19,7 @@ Thumbs.db
 
 # dependencies
 node_modules/
+.yarn/
 
 # compiled output
 apps/**/dist

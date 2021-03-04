@@ -1,9 +1,6 @@
 {
-  "name": "root",
+  "name": "ng-clean-architecture",
   "private": true,
-  "devDependencies": {
-    "lerna": "^3.22.1"
-  },
   "workspaces": [
     "apps/*",
     "libs/*",
