@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "format": "prettier --write '*/**/*.{ts,scss,md,json}'",
-    "lint:ts": "tsc",
+    "lint:ts": "tsc --noEmit",
     "lint:css": "stylelint '*/**/*.scss' --syntax scss"
   },
   "devDependencies": {

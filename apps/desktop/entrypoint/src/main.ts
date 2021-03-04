@@ -3,7 +3,7 @@ import * as path from 'path';
 import * as url from 'url';
 import { isDev } from './util'
 
-let win: BrowserWindow = null;
+let win: BrowserWindow | undefined;
 
 function createWindow(): BrowserWindow {
 
@@ -40,7 +40,7 @@ function createWindow(): BrowserWindow {
     // Dereference the window object, usually you would store window
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
-    win = null;
+    win = undefined;
   });
 
   return win;
