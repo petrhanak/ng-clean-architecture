@@ -1,6 +1,25 @@
 {
   "name": "ng-clean-architecture",
   "private": true,
+  "scripts": {
+    "format": "prettier --write '*/**/*.{ts,scss,md,json}'",
+    "lint:ts": "tsc",
+    "lint:css": "stylelint '*/**/*.scss' --syntax scss"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.0.0",
+    "@linters/commitlint-config": "^1.5.1",
+    "@linters/eslint-config-angular": "^1.8.4",
+    "@linters/eslint-config-jest": "^1.8.1",
+    "@linters/prettier-config": "^1.3.1",
+    "@linters/stylelint-scss-config": "^1.5.2",
+    "eslint": "^7.20.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "stylelint": "^13.11.0",
+    "typescript": "~4.1.5"
+  },
   "workspaces": [
     "apps/*",
     "libs/*",

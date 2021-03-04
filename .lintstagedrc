@@ -1,0 +1,12 @@
+{
+  "*.{css,scss}": [
+    "stylelint --syntax scss --fix",
+    "prettier --write"
+  ],
+  "*.{html,ts,md,json}": [
+    "prettier --write"
+  ],
+  "*.{ts,html}": [
+    "eslint --fix"
+  ]
+}
