@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core'
 import { interval } from 'rxjs'
-import {camelize} from 'humps'
+import { camelize } from 'humps'
 
 @Component({
   selector: 'lib-feature',
   template: `
     <p>
       feature works!
-      {{count}}
-      <br/>
+      {{ count }}
+      <br />
       <main-core-ui-modal></main-core-ui-modal>
-      {{text}}
+      {{ text }}
     </p>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class ExampleComponent implements OnInit {
   count: number = 0
@@ -25,9 +24,8 @@ export class ExampleComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const counter = interval(1000);
+    const counter = interval(1000)
 
-    counter.subscribe(num => this.count = num)
+    counter.subscribe((num) => (this.count = num))
   }
-
 }
