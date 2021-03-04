@@ -1,3 +1,1 @@
-export * from './lib/feature.service';
-export * from './lib/feature.component';
-export * from './lib/feature.module';
+export * from '@ngca/module/main/feature/example/example.module';

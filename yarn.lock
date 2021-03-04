@@ -7678,6 +7678,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"module-main-core@workspace:modules/main/core":
+  version: 0.0.0-use.local
+  resolution: "module-main-core@workspace:modules/main/core"
+  dependencies:
+    "@angular/core": ~11.2.1
+  languageName: unknown
+  linkType: soft
+
 "module-main-feature@workspace:modules/main/feature":
   version: 0.0.0-use.local
   resolution: "module-main-feature@workspace:modules/main/feature"

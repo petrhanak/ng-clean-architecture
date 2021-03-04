@@ -3,7 +3,6 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
@@ -21,8 +20,17 @@
       "dom"
     ],
     "paths": {
-      "@ngca/feature": [
-        "../../modules/main/feature/src/index.ts",
+      "@ngca/module/main/feature": [
+        "modules/main/feature/src/index.ts",
+      ],
+      "@ngca/module/main/core": [
+        "modules/main/core/src/index.ts",
+      ],
+      "@ngca/module/main/feature/*": [
+        "modules/main/feature/src/*",
+      ],
+      "@ngca/module/main/core/*": [
+        "modules/main/core/src/*",
       ]
     }
   },

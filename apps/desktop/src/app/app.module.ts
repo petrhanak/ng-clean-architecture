@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ExampleModule } from '@ngca/module/main/feature'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FeatureModule } from '@ngca/feature'
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { FeatureModule } from '@ngca/feature'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FeatureModule
+    ExampleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,13 +9,14 @@ import {camelize} from 'humps'
       feature works!
       {{count}}
       <br/>
+      <main-core-ui-modal></main-core-ui-modal>
       {{text}}
     </p>
   `,
   styles: [
   ]
 })
-export class FeatureComponent implements OnInit {
+export class ExampleComponent implements OnInit {
   count: number = 0
   text: string
 

@@ -1,0 +1,12 @@
+{
+  "name": "module-main-core",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "ng serve",
+    "build": "ng build"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/core": "~11.2.1"
+  }
+}
