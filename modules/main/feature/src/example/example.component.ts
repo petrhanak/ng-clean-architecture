@@ -12,6 +12,7 @@ import { camelize } from 'humps'
       <br />
       <main-core-ui-modal></main-core-ui-modal>
       {{ text }}
+      <theme-switcher></theme-switcher>
     </p>
   `,
   styles: [],

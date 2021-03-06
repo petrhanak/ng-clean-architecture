@@ -40,7 +40,10 @@
                 "output": "./assets/"
               }
             ],
-            "styles": ["../../modules/main/core/src/styles.scss"],
+            "styles": [
+              "../../modules/main/core/src/global.variables.scss",
+              "../../modules/main/core/src/global.scss"
+            ],
             "scripts": []
           },
           "configurations": {

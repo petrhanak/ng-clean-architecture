@@ -1,0 +1,22 @@
+body, body.force-light-theme {
+  --main-bg-color: white;
+  --main-accent-color: blue;
+  --main-accent-text-color: white;
+  --main-text-color: black;
+}
+
+body.force-dark-theme {
+  --main-bg-color: black;
+  --main-accent-color: darkblue;
+  --main-accent-text-color: white;
+  --main-text-color: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    --main-bg-color: black;
+    --main-accent-color: darkblue;
+    --main-accent-text-color: white;
+    --main-text-color: white;
+  }
+}
