@@ -12,6 +12,18 @@
       },
       "root": ".",
       "sourceRoot": "src",
+      "i18n": {
+        "sourceLocale": {
+          "code": "en",
+          "baseHref": ""
+        },
+        "locales": {
+          "cs": {
+            "translation": "../../modules/main/core/src/locale/messages.cs.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
@@ -33,6 +45,8 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "./",
+              "localize": true,
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -61,6 +75,9 @@
           "configurations": {
             "production": {
               "browserTarget": "desktop:build:production"
+            },
+            "cs": {
+              "browserTarget": "desktop:build:cs"
             }
           }
         },

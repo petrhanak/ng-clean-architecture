@@ -1,4 +1,4 @@
-import { app, BrowserWindow, screen } from 'electron'
+import { app, BrowserWindow, Menu, screen } from 'electron'
 import * as path from 'path'
 import * as url from 'url'
 import { isDev } from './util'
@@ -23,13 +23,62 @@ function createWindow(): BrowserWindow {
     },
   })
 
+  const menu = Menu.buildFromTemplate([
+    {
+      label: 'File',
+      submenu: [
+        {
+          label: 'Exit',
+          click() {
+            app.quit()
+          },
+        },
+      ],
+    },
+    {
+      label: 'Language',
+      submenu: [
+        {
+          label: 'English',
+          click() {
+            if (!isDev) {
+              win.loadURL(
+                url.format({
+                  pathname: path.join(__dirname, '../../dist/en/index.html'),
+                  protocol: 'file:',
+                  slashes: true,
+                }),
+              )
+            }
+          },
+        },
+        {
+          label: 'Czech',
+          click() {
+            if (!isDev) {
+              win.loadURL(
+                url.format({
+                  pathname: path.join(__dirname, '../../dist/cs/index.html'),
+                  protocol: 'file:',
+                  slashes: true,
+                }),
+              )
+            }
+          },
+        },
+      ],
+    },
+  ])
+
+  Menu.setApplicationMenu(menu)
+
   if (isDev) {
     win.webContents.openDevTools()
     win.loadURL('http://localhost:4200')
   } else {
     win.loadURL(
       url.format({
-        pathname: path.join(__dirname, '../../dist/index.html'),
+        pathname: path.join(__dirname, '../../dist/en/index.html'),
         protocol: 'file:',
         slashes: true,
       })

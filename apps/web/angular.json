@@ -12,6 +12,12 @@
       "root": ".",
       "sourceRoot": "./src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "cs": "../../modules/main/core/src/locale/messages.cs.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -45,6 +51,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "localize": true,
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -64,6 +71,9 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "cs": {
+              "localize": ["cs"]
             }
           }
         },
@@ -75,6 +85,9 @@
           "configurations": {
             "production": {
               "browserTarget": "web:build:production"
+            },
+            "cs": {
+              "browserTarget": "web:build:cs"
             }
           }
         },

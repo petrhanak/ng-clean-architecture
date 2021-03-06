@@ -6,6 +6,7 @@ import { camelize } from 'humps'
   selector: 'lib-feature',
   template: `
     <p>
+      <lib-another></lib-another>
       feature works!
       {{ count }}
       <br />

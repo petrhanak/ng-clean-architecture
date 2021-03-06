@@ -3,7 +3,7 @@ import { Component } from '@angular/core'
 @Component({
   selector: 'lib-another',
   template: `
-    <button>click me</button>
+    <button i18n>click me</button>
   `,
   styles: [],
 })
