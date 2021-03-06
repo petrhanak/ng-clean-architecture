@@ -22,8 +22,19 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "../../modules/main/core/src/assets",
+                "output": "./assets/"
+              },
+              {
+                "glob": "favicon.ico",
+                "input": "../../modules/main/core/src/assets/icons",
+                "output": "/"
+              }
+            ],
+            "styles": ["../../modules/main/core/src/styles.scss"],
             "scripts": []
           },
           "configurations": {

@@ -21,8 +21,14 @@
             "main": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
-            "assets": ["src/assets"],
-            "styles": ["src/styles.scss"],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "../../modules/main/core/src/assets",
+                "output": "./assets/"
+              }
+            ],
+            "styles": ["../../modules/main/core/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
