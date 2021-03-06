@@ -1,8 +1,6 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitReturns": true,
@@ -18,21 +16,7 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "@ngca/module/main/feature": [
-        "modules/main/feature/src/index.ts",
-      ],
-      "@ngca/module/main/core": [
-        "modules/main/core/src/index.ts",
-      ],
-      "@ngca/module/main/feature/*": [
-        "modules/main/feature/src/*",
-      ],
-      "@ngca/module/main/core/*": [
-        "modules/main/core/src/*",
-      ]
-    }
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

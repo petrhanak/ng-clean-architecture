@@ -1,9 +1,23 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "outDir": "../out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@ngca/module/main/feature": [
+        "../../modules/main/feature/src/index.ts"
+      ],
+      "@ngca/module/main/core": [
+        "../../modules/main/core/src/index.ts"
+      ],
+      "@ngca/module/main/feature/*": [
+        "../../modules/main/feature/src/*"
+      ],
+      "@ngca/module/main/core/*": [
+        "../../modules/main/core/src/*"
+      ]
+    }
   },
   "files": ["src/main.ts", "src/polyfills.ts"],
   "include": ["src/**/*.d.ts"]

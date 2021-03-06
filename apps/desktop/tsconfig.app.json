@@ -5,7 +5,22 @@
     "target": "es2015",
     "module": "es2020",
     "types": [],
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ngca/module/main/feature": [
+        "../../modules/main/feature/src/index.ts"
+      ],
+      "@ngca/module/main/core": [
+        "../../modules/main/core/src/index.ts"
+      ],
+      "@ngca/module/main/feature/*": [
+        "../../modules/main/feature/src/*"
+      ],
+      "@ngca/module/main/core/*": [
+        "../../modules/main/core/src/*"
+      ]
+    }
   },
   "include": ["src/main.ts", "src/polyfills.ts"],
   "exclude": ["**/*.spec.ts"],
