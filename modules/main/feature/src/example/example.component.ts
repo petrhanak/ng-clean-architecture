@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { interval } from 'rxjs'
 import { camelize } from 'humps'
+import { interval } from 'rxjs'
 
 @Component({
   selector: 'lib-feature',
@@ -18,14 +18,14 @@ import { camelize } from 'humps'
   styles: [],
 })
 export class ExampleComponent implements OnInit {
-  count: number = 0
-  text: string
+  public count = 0
+  public readonly text: string
 
   constructor() {
     this.text = camelize('hello_world-foo bar')
   }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     const counter = interval(1000)
 
     counter.subscribe((num) => (this.count = num))

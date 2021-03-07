@@ -1,6 +1,7 @@
-import { app, BrowserWindow, Menu, screen } from 'electron'
+/* eslint-disable */
 import * as path from 'path'
 import * as url from 'url'
+import { app, BrowserWindow, Menu, screen } from 'electron'
 import { isDev } from './util'
 
 let win: BrowserWindow | undefined
@@ -17,7 +18,7 @@ function createWindow(): BrowserWindow {
     height: size.height,
     webPreferences: {
       nodeIntegration: false,
-      allowRunningInsecureContent: isDev ? true : false,
+      allowRunningInsecureContent: Boolean(isDev),
       contextIsolation: false, // false if you want to run 2e2 test with Spectron
       enableRemoteModule: true, // true if you want to run 2e2 test  with Spectron or use remote module in renderer context (ie. Angular)
     },
@@ -42,12 +43,12 @@ function createWindow(): BrowserWindow {
           label: 'English',
           click() {
             if (!isDev) {
-              win.loadURL(
+              win!.loadURL(
                 url.format({
                   pathname: path.join(__dirname, '../../dist/en/index.html'),
                   protocol: 'file:',
                   slashes: true,
-                }),
+                })
               )
             }
           },
@@ -56,12 +57,12 @@ function createWindow(): BrowserWindow {
           label: 'Czech',
           click() {
             if (!isDev) {
-              win.loadURL(
+              win!.loadURL(
                 url.format({
                   pathname: path.join(__dirname, '../../dist/cs/index.html'),
                   protocol: 'file:',
                   slashes: true,
-                }),
+                })
               )
             }
           },

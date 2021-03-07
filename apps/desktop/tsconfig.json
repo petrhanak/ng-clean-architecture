@@ -4,6 +4,9 @@
     "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "paths": {
+      "@ngca/app/desktop/*": [
+        "./src/*"
+      ],
       "@ngca/module/main/feature": [
         "../../modules/main/feature/src/index.ts"
       ],

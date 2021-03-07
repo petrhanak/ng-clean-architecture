@@ -11,4 +11,17 @@ module.exports = {
     ]
   }, components, templates],
   ignorePatterns: ['lib'],
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: [
+          'apps/desktop/tsconfig.json',
+          'apps/web/tsconfig.json',
+          'apps/web-e2e/tsconfig.json',
+          'modules/main/core/tsconfig.json',
+          'modules/main/feature/tsconfig.json',
+        ],
+      }
+    },
+  },
 }

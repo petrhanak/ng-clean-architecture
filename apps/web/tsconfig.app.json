@@ -5,6 +5,9 @@
     "outDir": "../out-tsc/app",
     "types": [],
     "paths": {
+      "@ngca/app/web/*": [
+        "./src/*"
+      ],
       "@ngca/module/main/feature": [
         "../../modules/main/feature/src/index.ts"
       ],

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import { ExampleModule } from '@ngca/module/main/feature'
 
-import { AppRoutingModule } from './app-routing.module'
-import { AppComponent } from './app.component'
+import { AppRoutingModule } from '@ngca/app/web/app/app-routing.module'
+import { AppComponent } from '@ngca/app/web/app/app.component'
+import { ExampleModule } from '@ngca/module/main/feature'
 
 @NgModule({
   declarations: [AppComponent],
