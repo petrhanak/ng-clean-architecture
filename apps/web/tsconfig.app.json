@@ -5,21 +5,11 @@
     "outDir": "../out-tsc/app",
     "types": [],
     "paths": {
-      "@ngca/app/web/*": [
-        "./src/*"
-      ],
-      "@ngca/module/main/feature": [
-        "../../modules/main/feature/src/index.ts"
-      ],
-      "@ngca/module/main/core": [
-        "../../modules/main/core/src/index.ts"
-      ],
-      "@ngca/module/main/feature/*": [
-        "../../modules/main/feature/src/*"
-      ],
-      "@ngca/module/main/core/*": [
-        "../../modules/main/core/src/*"
-      ]
+      "@ngca/app/web/*": ["./src/*"],
+      "@ngca/module/main/feature": ["../../modules/main/feature/src/index.ts"],
+      "@ngca/module/main/core": ["../../modules/main/core/src/index.ts"],
+      "@ngca/module/main/feature/*": ["../../modules/main/feature/src/*"],
+      "@ngca/module/main/core/*": ["../../modules/main/core/src/*"]
     }
   },
   "files": ["src/main.ts", "src/polyfills.ts"],

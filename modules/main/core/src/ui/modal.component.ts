@@ -5,5 +5,4 @@ import { Component } from '@angular/core'
   template: ' <p>modal</p> ',
   styles: [],
 })
-export class ModalComponent {
-}
+export class ModalComponent {}

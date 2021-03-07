@@ -4,7 +4,6 @@
   "main": "entrypoint/out/main.js",
   "private": true,
   "scripts": {
-    "ng": "ng",
     "start": "npm-run-all -p electron:serve:watch ng:serve",
     "start:cs": "npm-run-all -p electron:serve:watch ng:serve:cs",
     "build": "npm run build:entry && ng build -c production && electron-builder build",

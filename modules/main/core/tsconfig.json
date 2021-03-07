@@ -3,9 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@ngca/module/main/core/*": [
-        "./src/*"
-      ]
+      "@ngca/module/main/core/*": ["./src/*"]
     }
   }
 }

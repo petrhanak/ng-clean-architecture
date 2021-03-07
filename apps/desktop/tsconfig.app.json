@@ -8,21 +8,11 @@
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
-      "@ngca/app/desktop/*": [
-        "./src/*"
-      ],
-      "@ngca/module/main/feature": [
-        "../../modules/main/feature/src/index.ts"
-      ],
-      "@ngca/module/main/core": [
-        "../../modules/main/core/src/index.ts"
-      ],
-      "@ngca/module/main/feature/*": [
-        "../../modules/main/feature/src/*"
-      ],
-      "@ngca/module/main/core/*": [
-        "../../modules/main/core/src/*"
-      ]
+      "@ngca/app/desktop/*": ["./src/*"],
+      "@ngca/module/main/feature": ["../../modules/main/feature/src/index.ts"],
+      "@ngca/module/main/core": ["../../modules/main/core/src/index.ts"],
+      "@ngca/module/main/feature/*": ["../../modules/main/feature/src/*"],
+      "@ngca/module/main/core/*": ["../../modules/main/core/src/*"]
     }
   },
   "include": ["src/main.ts", "src/polyfills.ts"],

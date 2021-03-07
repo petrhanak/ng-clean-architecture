@@ -5,13 +5,8 @@
     "types": ["cypress"],
     "baseUrl": ".",
     "paths": {
-      "@ngca/app/web-e2e/*": [
-        "./src/*"
-      ]
+      "@ngca/app/web-e2e/*": ["./src/*"]
     }
   },
-  "include": [
-    "**/*.ts"
-  ]
+  "include": ["**/*.ts"]
 }
-

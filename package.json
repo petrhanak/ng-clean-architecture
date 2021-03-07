@@ -2,7 +2,7 @@
   "name": "ng-clean-architecture",
   "private": true,
   "scripts": {
-    "format": "prettier --write '*/**/*.{ts,scss,md,json}'",
+    "lint:format": "prettier --write '*/**/*.{ts,scss,md,json}'",
     "lint:ts": "tsc --noEmit",
     "lint:css": "stylelint '*/**/*.scss' --syntax scss --fix",
     "lint:code": "eslint '*/**/*.ts' --fix"

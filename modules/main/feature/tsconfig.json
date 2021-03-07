@@ -3,17 +3,13 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@ngca/module/main/core": [
-        "../core/src/index.ts"
-      ],
-      "@ngca/module/main/feature/*": [
-        "./src/*"
-      ]
+      "@ngca/module/main/core": ["../core/src/index.ts"],
+      "@ngca/module/main/feature/*": ["./src/*"]
     }
   },
   "references": [
     {
       "path": "../core/tsconfig.json"
-    },
+    }
   ]
 }
