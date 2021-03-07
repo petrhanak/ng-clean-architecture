@@ -1,22 +1,23 @@
-body, body.force-light-theme {
-  --main-bg-color: white;
-  --main-accent-color: blue;
-  --main-accent-text-color: white;
-  --main-text-color: black;
+body,
+.force-light-theme {
+  --main-bg-color: #ffffff;
+  --main-accent-color: #0000ff;
+  --main-accent-text-color: #ffffff;
+  --main-text-color: #000000;
 }
 
-body.force-dark-theme {
-  --main-bg-color: black;
-  --main-accent-color: darkblue;
-  --main-accent-text-color: white;
-  --main-text-color: white;
+.force-dark-theme {
+  --main-bg-color: #000000;
+  --main-accent-color: #00008b;
+  --main-accent-text-color: #ffffff;
+  --main-text-color: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    --main-bg-color: black;
-    --main-accent-color: darkblue;
-    --main-accent-text-color: white;
-    --main-text-color: white;
+    --main-bg-color: #000000;
+    --main-accent-color: #00008b;
+    --main-accent-text-color: #ffffff;
+    --main-text-color: #ffffff;
   }
 }
