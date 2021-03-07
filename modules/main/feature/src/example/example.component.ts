@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { camelize } from 'humps'
 import { interval } from 'rxjs'
+import { FormatCaseService } from '@ngca/module/main/feature/example/format-case.service'
 
 @Component({
   selector: 'lib-feature',
@@ -21,8 +21,8 @@ export class ExampleComponent implements OnInit {
   public count = 0
   public readonly text: string
 
-  constructor() {
-    this.text = camelize('hello_world-foo bar')
+  constructor(formatCaseService: FormatCaseService) {
+    this.text = formatCaseService.camelize('hello_world-foo bar')
   }
 
   public ngOnInit(): void {

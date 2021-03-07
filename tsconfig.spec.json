@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "types": ["jest", "node"],
+    "paths": {
+      "@ngca/module/main/feature/*": ["./modules/main/feature/src/*"]
+    }
+  },
+  "files": ["src/test-setup.ts"]
+}
