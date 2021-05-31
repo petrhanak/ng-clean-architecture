@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist/out-tsc",
+    "paths": {
+      "@ngca/app/web/*": ["./src/*"],
+      "@ngca/module/main/feature": ["../../modules/main/feature/src/index.ts"],
+      "@ngca/module/main/core": ["../../modules/main/core/src/index.ts"]
+    }
+  },
+  "references": [
+    {
+      "path": "../../modules/main/feature/tsconfig.json"
+    },
+    {
+      "path": "../../modules/main/core/tsconfig.json"
+    }
+  ]
+}
